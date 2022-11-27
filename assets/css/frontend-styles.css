@@ -1,0 +1,37 @@
+/*
+	Frontend styles for the gift fields
+*/
+
+.gift-toggle {
+	padding:12pt 0;	
+}
+
+#gift-fields {
+	overflow:hidden;
+	transition:all ease 0.3s;
+	max-height:1000px;
+	margin-bottom:6pt;
+}
+
+#gift-fields.hide {
+	max-height:0;
+	margin-bottom:0;
+}
+
+#gift-fields input, #gift-fields textarea {
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	display: inline-block;
+	font-size: 16px !important;
+	margin: 6pt 0;
+	padding: 6pt;
+	width: auto;
+	max-width: 100%;
+	width:400px;
+	transition:all ease 0.4s;
+}
+
+#gift-fields #message.warning-colour {
+	outline: 1px solid var(--wc-orange);
+}
