@@ -19,6 +19,7 @@ node_modules/
 
 # ignore dreamweaver sync directories
 _notes/
+dwsync.xml
 
 # ignore log files and databases
 *.log
