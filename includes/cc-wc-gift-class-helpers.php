@@ -24,3 +24,7 @@ function CC_WC_Gift_Order(){ // The admin order class
 function CC_WC_Gift_Cart(){ // The front end cart class
 	return CC_WC_Gift_Cart::get_instance();
 }
+
+function CC_WC_Gift_Admin_Product(){ // The front end cart class
+	return CC_WC_Gift_Admin_Product::get_instance();
+}

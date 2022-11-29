@@ -59,6 +59,10 @@ if(!class_exists('CC_WC_GIFT')) {
 		
 		function initialise_plugin() {
 			$this->includes();
+
+			CC_WC_GIFT_Display()->get_instance();
+			CC_WC_GIFT_Order()->get_instance();
+			CC_WC_GIFT_Cart()->get_instance();
 			
 			if(!is_admin()) {
 				$this->frontend_includes();
@@ -66,12 +70,8 @@ if(!class_exists('CC_WC_GIFT')) {
 						
 			if(is_admin()) {
 				$this->admin_includes();	
-				add_action('admin_enqueue_scripts','register_admin_scripts');
+				CC_WC_Gift_Admin_Product()->get_instance();
 			}
-			
-			CC_WC_GIFT_Display()->get_instance();
-			CC_WC_GIFT_Order()->get_instance();
-			CC_WC_GIFT_Cart()->get_instance();
 		}
 		
 		public function includes() {
@@ -86,7 +86,7 @@ if(!class_exists('CC_WC_GIFT')) {
 		}
 		
 		public function admin_includes() {
-			require_once( 'cc-wc-gift-admin-product-functions.php' );
+			require_once( 'class-cc-wc-gift-admin-product.php' );
 		}
 		
 		
