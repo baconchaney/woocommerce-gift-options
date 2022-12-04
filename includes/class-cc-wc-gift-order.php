@@ -45,9 +45,9 @@ class CC_WC_Gift_Order {
 	*/
 	public function __construct() {
 		// Add in custom text field to add order tracking code to order meta
-		add_action('woocommerce_admin_order_data_after_shipping_address',array( $this,'cc_wc_gift_render_tracking_details_field'));
+		add_action('woocommerce_admin_order_data_after_shipping_address',array( $this,'render_tracking_details_field'));
 		// Save data from tracking code field
-		add_action('woocommerce_process_shop_order_meta',array( $this,'cc_wc_gift_save_tracking_details'));
+		add_action('woocommerce_process_shop_order_meta',array( $this,'save_tracking_details'));
 		// Change _is_gift meta data key name to be user friendly to users
 		add_filter('woocommerce_order_item_display_meta_key', array($this, 'gift_meta_key_display'), 20, 3 );
 		// Change _is_gift meta data key value to be user friendly to users
@@ -78,8 +78,14 @@ class CC_WC_Gift_Order {
 		$display_value = 'Yes';
 		return $display_value;
 	}
-	
-	function cc_wc_gift_render_tracking_details_field($order) {
+	/*
+	* Display tracking code field in order admin
+	*
+	* @return void
+	* 
+	* @since 1.0
+	*/
+	function render_tracking_details_field($order) {
 		$trackingCode = $order->get_meta('tracking_details');
 		
 		$trackingInputField = woocommerce_wp_text_input(array(
@@ -89,8 +95,14 @@ class CC_WC_Gift_Order {
 			'wrapper_class' => 'form-field-wide',
 		));
 	}
-	
-	function cc_wc_gift_save_tracking_details($order_id) {
+	/*
+	* Save tracking detail field input
+	*
+	* @return void
+	* 
+	* @since 1.0
+	*/
+	function save_tracking_details($order_id) {
 		   update_post_meta ( $order_id, 'tracking_details',wc_clean( $_POST[ 'tracking' ] ) );
 	}
 

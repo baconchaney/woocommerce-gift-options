@@ -25,6 +25,10 @@ function CC_WC_Gift_Cart(){ // The front end cart class
 	return CC_WC_Gift_Cart::get_instance();
 }
 
-function CC_WC_Gift_Admin_Product(){ // The front end cart class
+function CC_WC_Gift_Admin_Product(){ // The product admin class
 	return CC_WC_Gift_Admin_Product::get_instance();
+}
+
+function CC_WC_Gift_Email(){ // The email class
+	return CC_WC_Gift_Email::get_instance();
 }

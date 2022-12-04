@@ -63,6 +63,7 @@ if(!class_exists('CC_WC_GIFT')) {
 			CC_WC_GIFT_Display()->get_instance();
 			CC_WC_GIFT_Order()->get_instance();
 			CC_WC_GIFT_Cart()->get_instance();
+			CC_WC_GIFT_Email()->get_instance();
 			
 			if(!is_admin()) {
 				$this->frontend_includes();
@@ -78,6 +79,7 @@ if(!class_exists('CC_WC_GIFT')) {
 			require_once( 'class-cc-wc-gift-order.php' );
 			require_once( 'class-cc-wc-gift-cart.php' );
 			require_once( 'class-cc-wc-gift-display.php' );
+			require_once( 'class-cc-wc-gift-email.php' );
 			require_once( 'cc-wc-gift-class-helpers.php' );
 		}
 		
