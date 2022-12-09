@@ -5,6 +5,7 @@
  * @class    CC_WC_GIFT
  * @package  Woocommerce Gift Options
  * @since    1.0.0
+ * @version 1.1.0
  */
  
  if ( ! defined( 'ABSPATH' ) ) {
@@ -58,12 +59,16 @@ if(!class_exists('CC_WC_GIFT')) {
 		}
 		
 		function initialise_plugin() {
+			// Load translation files.
+			add_action( 'init', array( $this, 'load_plugin_textdomain' ) );
+			
 			$this->includes();
 
 			CC_WC_GIFT_Display()->get_instance();
 			CC_WC_GIFT_Order()->get_instance();
 			CC_WC_GIFT_Cart()->get_instance();
 			CC_WC_GIFT_Email()->get_instance();
+			
 			
 			if(!is_admin()) {
 				$this->frontend_includes();
@@ -91,6 +96,16 @@ if(!class_exists('CC_WC_GIFT')) {
 			require_once( 'class-cc-wc-gift-admin-product.php' );
 		}
 		
-		
+        /*
+        * Localisation
+        *
+        * @return void
+        * 
+		* @since 1.1.0
+        */
+		public function load_plugin_textdomain() {
+			load_plugin_textdomain( 'cc_wc_gift_options', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+		}
+
 	}
 }

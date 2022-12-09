@@ -5,6 +5,7 @@
  * @class    CC_WC_Gift_Order
  * @package  Woocommerce Gift Options
  * @since    1.0.0
+ * @version 1.1.0
  */
 
 // Exit if accessed directly
@@ -60,10 +61,11 @@ class CC_WC_Gift_Order {
 	* @return void
 	* 
 	* @since 1.0
+	* @version 1.1.0
 	*/
 	public function gift_meta_key_display( $display_key, $meta, $item ) {
 		if($meta->key === 'is_gift')
-		$display_key = 'Is a gift';
+		$display_key = __('Is a gift','cc_wc_gift_options');
 		return $display_key;
 	}
 	/*
@@ -72,10 +74,11 @@ class CC_WC_Gift_Order {
 	* @return void
 	* 
 	* @since 1.0
+	* @version 1.1.0
 	*/
 	public function gift_meta_value_display( $display_value, $meta, $item ) {
 		if($meta->key === 'is_gift')
-		$display_value = 'Yes';
+		$display_value = __('Yes','cc_wc_gift_options');
 		return $display_value;
 	}
 	/*
@@ -84,13 +87,14 @@ class CC_WC_Gift_Order {
 	* @return void
 	* 
 	* @since 1.0
+	* @version 1.1.0
 	*/
 	function render_tracking_details_field($order) {
 		$trackingCode = $order->get_meta('tracking_details');
 		
 		$trackingInputField = woocommerce_wp_text_input(array(
 			'id' => 'tracking',
-			'label' => 'Tracking Code',
+			'label' => esc_html('Tracking Code','cc_wc_gift_options'),
 			'value' => $trackingCode,
 			'wrapper_class' => 'form-field-wide',
 		));
