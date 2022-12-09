@@ -5,6 +5,7 @@
  * @class    CC_WC_Gift_Email
  * @package  Woocommerce Gift Options
  * @since    1.0.0
+ * @version 1.1.0
  */
 
 // Exit if accessed directly
@@ -47,6 +48,7 @@ if(!class_exists('CC_WC_Gift_Email')) {
         * @return void
         * 
         * @since 1.0
+		* @version 1.1.0
         */
         function render_order_meta( $fields, $sent_to_admin, $order ) {
             $tracking = $order->get_meta('tracking_details');
@@ -54,7 +56,7 @@ if(!class_exists('CC_WC_Gift_Email')) {
             if (empty($tracking)) return $fields;
 
             $fields['tracking_code'] = array(
-                'label' => 'Order tracking code',
+                'label' => __('Order tracking code','cc_wc_gift_options'),
                 'value' => $tracking
             );
 

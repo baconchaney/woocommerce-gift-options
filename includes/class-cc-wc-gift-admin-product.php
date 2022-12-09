@@ -5,6 +5,7 @@
  * @class    CC_WC_Gift_Admin_Product
  * @package  Woocommerce Gift Options
  * @since    1.0.0
+ * @version 1.1.0
  */
 
 // Exit if accessed directly
@@ -48,22 +49,24 @@ class CC_WC_Gift_Admin_Product {
 	* @return void
 	* 
 	* @since 1.0
+	* @version 1.1.0
 	*/
     public function cc_wc_gift_product_gift_fields() {
         global $woocommerce, $post;
             
         $_giftwrapping_option = get_post_meta($post->ID, 'cc_wc_gift_giftwrapping_option');
         $_giftwrapping_price = get_post_meta($post->ID, 'cc_wc_gift_giftwrapping_price');
+		$_currency_symbol = get_woocommerce_currency_symbol();
                     
         echo '<div class="gift_fields options_group">';
             $radioGift = woocommerce_wp_radio(array(
                     'id' => 'cc_wc_gift_giftwrapping_option',
-                    'label' => 'Allow giftwrapping?',
+                    'label' => __('Allow giftwrapping?','cc_wc_gift_options'),
                     'value'=> ($_giftwrapping_option)? $_giftwrapping_option[0]: '0',
                     'options' => array(
-                        '0' => 'No',
-                        '1' => 'Enabled by default (no charge)',
-                        '2' => 'Yes but chargeable'
+                        '0' => __('No','cc_wc_gift_options'),
+                        '1' => __('Enabled by default (no charge)','cc_wc_gift_options'),
+                        '2' => __('Yes but chargeable','cc_wc_gift_options')
                     ),
                     'default' => ($_giftwrapping_option)? $_giftwrapping_option[0]: '0',
                     'style' => 'width:16px',
@@ -72,16 +75,16 @@ class CC_WC_Gift_Admin_Product {
                 
                 woocommerce_wp_text_input(array(
                     'id' => 'cc_wc_gift_giftwrapping_price',
-                    'label' => 'Price for giftwrapping (£)',
+                    'label' => sprintf(__('Price for giftwrapping (%s)','cc_wc_gift_options'),$_currency_symbol),
                     'desc_tip' => 'true',
-                    'description' => 'Price to be added if chosen by customer',
+                    'description' => __('Price to be added if chosen by customer','cc_wc_gift_options'),
                     'value'=> ($_giftwrapping_price)? $_giftwrapping_price[0] : '',
                     'default' => '0.00',
                     'wrapper_class' => 'form-field form-field-wide',
                     'class' => 'short wc_input_price',
                     'type' => 'price',
                 ));	
-                
+
             echo '</div>';
     }
     /*

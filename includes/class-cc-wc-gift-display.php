@@ -7,6 +7,7 @@
  * @class    CC_WC_Gift_Display
  * @package  Woocommerce Gift Options
  * @since    1.0.0
+ * @version 1.1.0
  */
 
 // Exit if accessed directly
@@ -117,6 +118,7 @@ class CC_WC_Gift_Display {
 	* @return void
 	* 
 	* @since 1.0
+	* @version 1.1.0
 	*/
 	public function add_gift_option_template() {
 		global $product;

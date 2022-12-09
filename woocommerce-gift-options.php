@@ -3,9 +3,11 @@
  * Plugin Name: Woocommerce gift options
  * Plugin URI: https://github.com/baconchaney/woocommerce-gift-option-plugin
  * Description: Create the options in Woocommerce to add product gift options.
- * Version: 1
+ * Version: 1.1.0
  * Author: Chris Chaney
  * Author URI: https://github.com/baconchaney/baconchaney
+ * Text Domain: cc_wc_gift_options
+ * Domain Path: /languages
  * WC requires at least: 3.1.0
  * WC tested up to: 7.1.0
  */
