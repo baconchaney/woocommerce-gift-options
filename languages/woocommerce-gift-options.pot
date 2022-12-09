@@ -1,0 +1,89 @@
+# Woocommerce Gift Options.
+# This file is distributed under the same license as the PACKAGE package.
+# Chris Chaney <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Woocommerce Gift Options 1.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-09 21:43+0000\n"
+"PO-Revision-Date: 2022-12-09 21:43+0\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Eazy Po 1.0.0.0\n"
+
+#: includes/class-cc-wc-gift-admin-product.php:64
+msgid "Allow giftwrapping?"
+msgstr ""
+
+#: includes/class-cc-wc-gift-admin-product.php:67
+msgid "No"
+msgstr ""
+
+#: includes/class-cc-wc-gift-admin-product.php:68
+msgid "Enabled by default (no charge)"
+msgstr ""
+
+#: includes/class-cc-wc-gift-admin-product.php:69
+msgid "Yes but chargeable"
+msgstr ""
+
+#: includes/class-cc-wc-gift-admin-product.php:78
+#, php-format
+msgid "Price for giftwrapping (%s)"
+msgstr ""
+
+#: includes/class-cc-wc-gift-admin-product.php:80
+msgid "Price to be added if chosen by customer"
+msgstr ""
+
+#: includes/class-cc-wc-gift-email.php:59
+msgid "Order tracking code"
+msgstr ""
+
+#: includes/class-cc-wc-gift-order.php:68
+msgid "Is a gift"
+msgstr ""
+
+#: includes/class-cc-wc-gift-order.php:81
+msgid "Yes"
+msgstr ""
+
+#: templates/single-product/gift-options.php:15
+msgid "Add a message"
+msgstr ""
+
+#: templates/single-product/gift-options.php:23
+msgid "Add gift wrapping? (+ "
+msgstr ""
+
+#: templates/single-product/gift-options.php:29
+msgid "Recipient's name:"
+msgstr ""
+
+#: templates/single-product/gift-options.php:30
+msgid "Recipient's name"
+msgstr ""
+
+#: templates/single-product/gift-options.php:31
+msgid "Your message:"
+msgstr ""
+
+#: templates/single-product/gift-options.php:32
+msgid "Your message"
+msgstr ""
+
+#: templates/single-product/gift-options.php:33
+msgid "characters remaining"
+msgstr ""
+
+#: templates/single-product/gift-options.php:34
+#: templates/single-product/gift-options.php:35
+msgid "From"
+msgstr ""
