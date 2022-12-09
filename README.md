@@ -1,9 +1,9 @@
 # Woocommerce Gift Options
-**Version:** 1.0.0
+**Version:** 1.1.0
 
-**Date:** 04 December 2022
+**Date:** 09 December 2022
 
-**Current Release:** https://github.com/baconchaney/woocommerce-gift-options/releases/tag/v1.0.0
+**Current Release:** https://github.com/baconchaney/woocommerce-gift-options/releases/tag/v1.1.0
 
 ## Description 
 A plugin to create the ability for Woocommerce store owners to add gift options to their products and delivery tracking codes to orders.
@@ -35,7 +35,10 @@ A plugin to create the ability for Woocommerce store owners to add gift options 
 ## Changelog
 **v1.0.0**
 - Initial release
+**v1.1.0**
+- Converted labels to translation friendly strings
+- Changed default behaviour for products that allow gift wrapping by default (no charge) to show the message fields on page load.
 
-## To Do
-- Add in string translation options
-- Add in the ability to add gift options when creating a new order via the Woocommerce order admin screen
+## To Do/requests
+- Add in the ability to add gift options when creating a new order via the Woocommerce order admin screen.
+- Add in an option to generate a packing slip (show gift wrapping message and hide prices for products).
