@@ -1,7 +1,7 @@
 # Woocommerce Gift Options
-**Version:** 1.1.0
+**Version:** 1.2.0
 
-**Date:** 09 December 2022
+**Date:** 29th January 2023
 
 **Current Release:** https://github.com/baconchaney/woocommerce-gift-options/releases/tag/v1.1.0
 
