@@ -25,3 +25,10 @@ dwsync.xml
 *.log
 *.sql
 *.sqlite
+utility/plugin-update-checker/.gitignore
+utility/plugin-update-checker/.editorconfig
+utility/plugin-update-checker/composer.json
+utility/plugin-update-checker/examples/plugin.json
+utility/plugin-update-checker/examples/theme.json
+utility/plugin-update-checker/js/debug-bar.js
+.gitignore

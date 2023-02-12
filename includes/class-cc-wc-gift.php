@@ -5,7 +5,7 @@
  * @class    CC_WC_GIFT
  * @package  Woocommerce Gift Options
  * @since    1.0.0
- * @version 1.1.0
+ * @version 1.2.0
  */
  
  if ( ! defined( 'ABSPATH' ) ) {
@@ -52,6 +52,28 @@ if(!class_exists('CC_WC_GIFT')) {
 		public function plugin_basename() {
 			return plugin_basename( CC_WC_GIFT_PLUGIN_FILE );
 		}
+
+		/**
+		 * Get the plugin slug.
+		 *
+		 * @return string
+		 * 
+		 * @since 1.2.0
+		 */
+		public function plugin_slug() {
+			return CC_WC_GIFT_PLUGIN_SLUG;
+		}	
+
+		/**
+		 * Get the plugin version number.
+		 *
+		 * @return string
+		 * 
+		 * @since 1.2.0
+		 */
+		public function plugin_version() {
+			return '1.2.0';
+		}	
 		
 		
 		public function __construct() {
